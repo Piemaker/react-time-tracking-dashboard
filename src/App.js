@@ -1,9 +1,10 @@
 import './App.scss';
+import Dashboard from './component/dashboard/Dashboard';
 
 function App() {
   return (
     <main>
-      hello!
+     <Dashboard/>
     </main>
   );
 }
