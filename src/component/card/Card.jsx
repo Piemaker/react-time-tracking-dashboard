@@ -1,16 +1,14 @@
 import React from 'react'
 import "./card.scss";
 // ! this doens't work but using it directly in src does. HAS TO BE IN PUBLIC FOLDER
-// import Elipses from "/images/icon-ellipsis.svg"
 
-export default function Card({ title, img, color, timeframes } ) {
-  console.log("🚀 ~ file: Card.jsx ~ line 5 ~ Card ~ title,img, color, timeframes", title, img, color, timeframes)
+export default function Card({ title, img, color, timeframes,filter} ) {
   return (
     <article className={`card  ${title}-card `}>
-      <div className="card-banner-container">
-      <div className="card-banner" style={{ backgroundColor: color }}>
-        <img src={img} alt="decoration-img" />
-      </div>
+      <div className="card-banner-container" style={{ backgroundColor: color }}>
+        <div className="card-banner" style={{ backgroundColor: color }}>
+          <img src={img} alt="decoration-img" />
+        </div>
       </div>
       <div className="card-description">
         <div className="card-description-title-container">
@@ -21,8 +19,12 @@ export default function Card({ title, img, color, timeframes } ) {
             alt="decoration-img"
           />
         </div>
-        <h2 className="card-description-duration">32hrs</h2>
-        <p className="card-description-status">last week - 36hrs</p>
+        <h2 className="card-description-duration">
+          {timeframes[filter].current}hrs
+        </h2>
+        <p className="card-description-status">
+          last week - {timeframes[filter].previous}hrs
+        </p>
       </div>
     </article>
   );
