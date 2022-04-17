@@ -19,12 +19,14 @@ export default function Card({ title, img, color, timeframes,filter} ) {
             alt="decoration-img"
           />
         </div>
-        <h2 className="card-description-duration">
-          {timeframes[filter].current}hrs
-        </h2>
-        <p className="card-description-status">
-          last week - {timeframes[filter].previous}hrs
-        </p>
+        <div className="card-description-report">
+          <h2 className="card-description-report-duration">
+            {timeframes[filter].current}hrs
+          </h2>
+          <p className="card-description-report-status">
+            last week - {timeframes[filter].previous}hrs
+          </p>
+        </div>
       </div>
     </article>
   );

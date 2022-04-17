@@ -3,19 +3,29 @@
 .person-card {
   display: grid;
   grid-template-rows: 2fr 1fr;
-  max-width: 200px;
   background-color: $Dark-blue;
   border-radius: $border-radius;
+  @media (min-width: 1140px) {
+    max-width: 200px;
+  }
 
   &-information {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     border-radius: $border-radius;
     background-color: $Blue;
     padding: $padding;
+    @media (min-width: 1140px) {
+        flex-direction: column;
+        align-items: normal;
+        gap: 0;
+    }
     &-image-container {
+        
       height: 3.5rem;
       display: flex;
       justify-content: left;
-      align-items: center;
       img {
         border: 2px white solid;
         border-radius: 50%;
@@ -23,6 +33,7 @@
       }
     }
     &-name-container {
+        align-self: flex-start;
       margin-top: 2rem;
       p {
         margin: 0;
@@ -43,11 +54,13 @@
     padding: $padding;
     background-color: $Dark-blue;
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
+    @media (min-width: 1140px) {
+      flex-direction: column;
+    }
     button {
-      color: white;  
+      color: white;
       background-color: transparent;
       border: none;
       margin: 0;
@@ -58,7 +71,7 @@
       }
     }
   }
-  &-filters-active{
-      color : $Desaturated-blue !important;
+  &-filters-active {
+    color: $Desaturated-blue !important;
   }
 }
