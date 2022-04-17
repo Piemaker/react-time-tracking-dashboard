@@ -1,6 +1,6 @@
 @import "./styles/defaults";
 body{
-  height: 100vh;
+  min-height: 100vh;
   margin : 0;
   background-color: $Very-dark-blue;
   display: flex;

@@ -1,0 +1,60 @@
+@import "../../styles/_defaults.scss";
+
+.person-card {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  max-width: 200px;
+  background-color: $Dark-blue;
+  border-radius: $border-radius;
+
+  &-information {
+    border-radius: $border-radius;
+    background-color: $Blue;
+    padding: $padding;
+    &-image-container {
+      height: 3.5rem;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      img {
+        border: 2px white solid;
+        border-radius: 50%;
+        height: 100%;
+      }
+    }
+    &-name-container {
+      margin-top: 2rem;
+      p {
+        margin: 0;
+        font-size: 0.65rem;
+        color: $Pale-Blue;
+      }
+      h1 {
+        margin: 0;
+        font-weight: 300;
+        font-size: 1.75rem;
+        word-wrap: break-word;
+      }
+    }
+  }
+  &-filters-container {
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    padding: $padding;
+    background-color: $Dark-blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    h2 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 400;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  &-filters-active{
+      color : $Desaturated-blue
+  }
+}

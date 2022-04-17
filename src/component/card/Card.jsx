@@ -6,9 +6,11 @@ import "./card.scss";
 export default function Card({ title, img, color, timeframes } ) {
   console.log("🚀 ~ file: Card.jsx ~ line 5 ~ Card ~ title,img, color, timeframes", title, img, color, timeframes)
   return (
-    <article className="card">
+    <article className={`card  ${title}-card `}>
+      <div className="card-banner-container">
       <div className="card-banner" style={{ backgroundColor: color }}>
         <img src={img} alt="decoration-img" />
+      </div>
       </div>
       <div className="card-description">
         <div className="card-description-title-container">
